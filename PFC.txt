@@ -6,11 +6,12 @@ On admet une fonction Input qui récupère ce que le joueur à marqué.
 
 
 On crée une constante MenuState type Booléen qu'on initialise comme Fausse
-
+On crée une varibale ScoreJoueur qu'on initialise à 0
+On crée une varibale ScoreIA qu'on initialise à 0
 
 
 On crée une fonction Joueur avec la variable choixJoueur tel que
-    On affiche "Pierre = 1, Feuille 2, Ciseau = 3"
+    On affiche "Pierre = 1, Feuille = 2, Ciseau = 3"
     On lit la variable choixJoueur entrée par l'utilisateur avec la fonction Input
 
 On retourne la variable choixJoueur
@@ -40,21 +41,27 @@ On crée une fonction Result telle que
 
     Si la variable choixJoueur est égale à 1 et que la variable choixIA est égale à 3 alors 
         on affiche "Le joueur a gagné"
+        on ajoute 1 à ScoreJoueur
 
     Si la variable choixJoueur est égale à 2 et que la variable choixIA est égale à 1 alors 
         on affiche "Le joueur a gagné"
+        on ajoute 1 à ScoreJoueur
 
     Si la variable choixJoueur est égale à 3 et que la variable choixIA est égale à 2 alors 
         on affiche "Le joueur a gagné"
+        on ajoute 1 à ScoreJoueur
 
     Si la variable choixJoueur est égale à 1 et que la variable choixIA est égale à 2 alors 
         on affiche "Le joueur a perdu"
+        on ajoute 1 à ScoreIA
 
     Si la variable choixJoueur est égale à 2 et que la variable choixIA est égale à 3 alors 
         on affiche "Le joueur a perdu"
+        on ajoute 1 à ScoreIA
 
     Si la variable choixJoueur est égale à 3 et que la variable choixIA est égale à 1 alors 
         on affiche "Le joueur a perdu"
+        on ajoute 1 à ScoreIA
 
 
 
@@ -68,10 +75,10 @@ Tant que MenuState est Fausse alors
     On retourne la variable Menustate
 
 
-
-On appelle la fonction Joueur
-On appelle la fonction IA
-On appelle la fonction Result
+Tant que ScoreJoueur est strictement inférieur à 3 ou que ScoreIA est strictement inférieur à 3 alors
+    On appelle la fonction Joueur
+    On appelle la fonction IA
+    On appelle la fonction Result
 
 
 
