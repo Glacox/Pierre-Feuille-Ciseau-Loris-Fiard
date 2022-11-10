@@ -62,7 +62,7 @@ Tant que MenuState est Fausse alors
 
     On affiche "Appuyer sur Entrée pour commencer"
     
-    Si la touche "Entrée" est pressée alors
+    Si la touche "Entrée" est detectée par la fonction Key alors
         Définir MenuState comme Vraie
     
     On retourne la variable Menustate
