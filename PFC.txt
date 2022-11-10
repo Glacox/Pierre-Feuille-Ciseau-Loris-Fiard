@@ -5,11 +5,11 @@ On admet une fonction Random qui choisi aléatoirement un chiffre entre 1 et 3 c
 On admet une fonction Input qui récupère ce que le joueur à marqué.
 
 
-On définit une constante MenuState type Booléen qu'on définit comme Fausse
+On crée une constante MenuState type Booléen qu'on initialise comme Fausse
 
 
 
-On définit une fonction Joueur avec la variable choixJoueur tel que
+On crée une fonction Joueur avec la variable choixJoueur tel que
     On affiche "Pierre = 1, Feuille 2, Ciseau = 3"
     On lit la variable choixJoueur entrée par l'utilisateur avec la fonction Input
 
@@ -17,7 +17,7 @@ On retourne la variable choixJoueur
 
 
 
-On définit une fonction IA avec la variable choixIA tel que
+On crée une fonction IA avec la variable choixIA tel que
 
     On utilise la fonction Random pour définir la variable choixIA
     Si la variable choixIA est égale à 1 alors 
@@ -33,7 +33,7 @@ On définit une fonction IA avec la variable choixIA tel que
 
 
 
-On définit une fonction Result telle que
+On crée une fonction Result telle que
     
     Si la variable choixJoueur est égale variable choixIA alors 
         on affiche "Egalité !"
