@@ -14,7 +14,7 @@ On crée une variable QuitDetect qu'on initialise à 0
 
 On crée une fonction Joueur avec la variable choixJoueur tel que
     On affiche "Pierre = 1, Feuille = 2, Ciseau = 3"
-    On définit la variable choixJoueur entrée par l'utilisateur avec la fonction Input
+    On définit la variable choixJoueur avec le retour de l'execution de la fonction Input
 
     On retourne la variable choixJoueur
 
@@ -22,7 +22,7 @@ On crée une fonction Joueur avec la variable choixJoueur tel que
 
 On crée une fonction IA avec la variable choixIA tel que
 
-    On utilise la fonction Random pour définir la variable choixIA
+    On définit la variable choixIA avec le retour de l'execution de la fonction Random
     Si la variable choixIA est égale à 1 alors 
         on affiche "L'IA a choisi Pierre"
 
@@ -88,9 +88,9 @@ Tant que Quit est Fausse alors
 
 
     Tant que ScoreJoueur est strictement inférieur à 3 ou que ScoreIA est strictement inférieur à 3 alors
-        On appelle la fonction Joueur
-        On appelle la fonction IA
-        On appelle la fonction Result
+        On execute la fonction Joueur
+        On execute la fonction IA
+        On execute la fonction Result
     
     On appelle la fonction Restart
 
