@@ -1,48 +1,25 @@
-# Début
 import random as r
 
-# On admet une fonction Key qui detecte sur quelle touche on a appuyé.
-# On admet une fonction Random qui choisi aléatoirement un chiffre entre 1 et 3 compris.
-# On admet une fonction Input qui récupère ce que le joueur à marqué.
-
-
-# On crée une constante MenuState type Booléen qu'on initialise comme Fausse
 MenuState=False
-# On crée une variable ScoreJoueur qu'on initialise à 0
 ScoreJoueur=0
-# On crée une variable ScoreIA qu'on initialise à 0
 ScoreIA=0
-# On crée une variable Quit qu'on initialise comme Fausse
 Quite=False
-# On crée une variable QuitDetect qu'on initialise à 0
 QuitDetect=0
 
-# On crée une fonction Joueur avec la variable choixJoueur tel que
 def Joueur(choixJoueur):
-#     On affiche "Pierre = 1, Feuille = 2, Ciseau = 3"
     print("Pierre = 1, Feuille = 2, Ciseau = 3")
-#     On définit la variable choixJoueur avec le retour de l'execution de la fonction Input
     choixJoueur = int(input("test"))
-
-#     On retourne la variable choixJoueur
     return choixJoueur
 
-
-
-# On crée une fonction IA avec la variable choixIA tel que
 def IA (choixIA) :
-#     On définit la variable choixIA avec le retour de l'execution de la fonction Random
     choixIA=r.randint(1,3)
-#     Si la variable choixIA est égale à 1 alors 
-#         on affiche "L'IA a choisi Pierre"
-
-#     Si la variable choixIA est égale à 2 alors 
-#         on affiche "L'IA a choisi Feuille"
-
-#     Si la variable choixIA est égale à 3 alors 
-#       on affiche "L'IA a choisi Ciseau"
-    
-#     On retourne la variable choixIA
+    if choixIA==1:
+        print("L'IA a choisi Pierre")
+    if choixIA==2:
+        print("L'IA a choisi Feuille")
+    if choixIA==3:
+        print("L'IA a choisi Ciseau")
+    return choixIA
 
 
 
