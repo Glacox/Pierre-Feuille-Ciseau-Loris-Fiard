@@ -1,15 +1,24 @@
 import random as r
 
+Quit=False
 ScoreJoueur=0
 ScoreIA=0
-Quit=False
-QuitDetect=0
 
 def Joueur():
-    print("Pierre = 1, Feuille = 2, Ciseau = 3")
-    choixJoueur = int(input())
+    syntax=False
+    while syntax==False:
+        choixJoueur = int(input("Pierre = 1, Feuille = 2, Ciseau = 3"))
+        if choixJoueur==1:
+            syntax=True
+        elif choixJoueur==2:
+            syntax=True
+        elif choixJoueur==3:
+            syntax=True
+        else:
+            print("Je n'ai pas compris")
+            
     return choixJoueur
-def IA() :
+def IA():
     choixIA=r.randint(1,3)
     if choixIA==1:
         print("L'IA a choisi Pierre")
@@ -21,49 +30,41 @@ def IA() :
 
 
 def Result():
-    global ScoreIA
-    global ScoreJoueur
-    choixJoueur=Joueur()
-    choixIA=IA()
-    
+    choixJoueur = Joueur()
+    choixIA = IA()
+
     if choixJoueur==choixIA:
         print("Egalité !")
     
     elif choixJoueur==1 and choixIA==3:
         print("Le joueur a gagné")
-        ScoreJoueur+=1
 
     elif choixJoueur==2 and choixIA==1:
         print("Le joueur a gagné")
-        ScoreJoueur+=1
 
     elif choixJoueur==3 and choixIA==2:
         print("Le joueur a gagné")
-        ScoreJoueur+=1
 
     elif choixJoueur==1 and choixIA==2:
         print("L'IA a gagné")
-        ScoreIA+=1
 
     elif choixJoueur==2 and choixIA==3:
         print("L'IA a gagné")
-        ScoreIA+=1
 
     elif choixJoueur==3 and choixIA==1:
         print("L'IA a gagné")
-        ScoreIA+=1
 
 def Restart():
+    global Quit
     print("Voulez-vous rejouer ? 1 = oui, 2 = non")
     QuitDetect = int(input())
     if QuitDetect==1:
         Quit==True
     else:
         Quit==False
-    
+    return Quit
+
+
 while Quit==False:
-    while ScoreJoueur<3 or ScoreIA<3:
-        Joueur()
-        IA()
-        Result()
-        Restart()
+    Result()
+    Restart()
