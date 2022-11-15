@@ -1,13 +1,12 @@
 import random as r
 
-Quit=False
 ScoreJoueur=0
 ScoreIA=0
 
 def Joueur():
     syntax=False
     while syntax==False:
-        choixJoueur = int(input("Pierre = 1, Feuille = 2, Ciseau = 3"))
+        choixJoueur = int(input("Pierre = 1, Feuille = 2, Ciseau = 3        : "))
         if choixJoueur==1:
             syntax=True
         elif choixJoueur==2:
@@ -55,16 +54,13 @@ def Result():
         print("L'IA a gagné")
 
 def Restart():
-    global Quit
-    print("Voulez-vous rejouer ? 1 = oui, 2 = non")
-    QuitDetect = int(input())
-    if QuitDetect==1:
-        Quit==True
+    QuitDetect = int(input("Voulez-vous rejouer ? 1 = oui, 2 = non      : "))
+    if QuitDetect == 1:
+        Result()
+        Restart()
     else:
-        Quit==False
-    return Quit
+        print("Fin de la partie")
 
 
-while Quit==False:
-    Result()
-    Restart()
+Result()
+Restart()
